@@ -411,6 +411,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Capy Admin Panel",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Capygg-UNIVERSAL-Admin-v3-238140"))()
+            end)
+            if not success then
+                warn("Failed to load Admin Panel: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
