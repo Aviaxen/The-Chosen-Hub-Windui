@@ -13,7 +13,6 @@ local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" 
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
 local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
-local GuiTab = Window:Tab({ Title = "Gui", Icon = "layout-template" })
 
 local HomeSection = HomeTab:Section({ 
     Title = "User Session Information",
@@ -297,30 +296,6 @@ ScriptsSection:Button({
     end
 })
 
-ScriptsSection:Button({
-    Title = "Grab Npcs",
-    Desc = "Launches Grab R6 NPC script",
-    Callback = function()
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
-            end)
-            if not success then warn("Error loading Grab Npcs: " .. tostring(err)) end
-        end)
-    end
-})
-
-ScriptsSection:Button({
-    Title = "Punch Npcs",
-    Desc = "Launches Fe Punch Script"
-    Callback = function()
-        task.spawn(function()
-            pcall(function()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/shakk-code/fe-punch-script/refs/heads/main/script.lua', true))()
-            end)
-        end)
-    end
-})
 
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
@@ -584,24 +559,15 @@ HubsSection:Button({
     end
 })
 
-HubsSection:Button({
-    Title = "Rob Hub",
+TrollingTab:Button({
+    Title = "Grab Npcs",
+    Desc = "Launches Grab R6 NPC script",
     Callback = function()
         task.spawn(function()
-            pcall(function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/KSvbtcPE"))()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
             end)
-        end)
-    end
-})
-
-HubsSection:Button({
-    Title = "Bacon Hub",
-    Callback = function()
-        task.spawn(function()
-            pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))()
-            end)
+            if not success then warn("Error loading Grab Npcs: " .. tostring(err)) end
         end)
     end
 })
@@ -658,58 +624,28 @@ GamesTab:Button({
     end
 })
 
-GuiTab:Button({
-    Title = "Coolkid Gui V1",
-    Callback = function() 
+GamesTab:Button({
+    Title = "Your 99 Nights Hub",
+    Desc = "Launches the 99 Nights hub script",
+    Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Your-99-nights-hub/refs/heads/main/Your%2099%20Nights%20Hub"))()
             end)
-            if not success then
-                warn("Failed to load Coolkid V1: " .. tostring(err))
-            end
+            if not success then warn("Error loading 99 Nights Hub: " .. tostring(err)) end
         end)
-    end 
+    end
 })
 
-GuiTab:Button({
-    Title = "Coolkid Gui V2",
-    Callback = function() 
+GamesTab:Button({
+    Title = "Your Prison Life Hub",
+    Desc = "Launches the Prison Life hub script",
+    Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lgui-134417"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Your-Prison-Life-Hub/refs/heads/main/Your%20Prison%20Life%20Hub"))()
             end)
-            if not success then
-                warn("Failed to load Coolkid V2: " .. tostring(err))
-            end
+            if not success then warn("Error loading Prison Life Hub: " .. tostring(err)) end
         end)
-    end 
-})
-
-GuiTab:Button({
-    Title = "Coolkid Gui V2.5",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://gist.githubusercontent.com/wateringcancan-eng/209697b404ddee53bac61f2dca1237fc/raw/7458e1e9dfbc277a0fe508663b4e33972e93bb1e/C00lcl4n_2_0.lua"))()
-            end)
-            if not success then
-                warn("Failed to load Coolkid V2.5: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-GuiTab:Button({
-    Title = "Coolkid Gui V3",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
-            end)
-            if not success then
-                warn("Failed to load Coolkid V3: " .. tostring(err))
-            end
-        end)
-    end 
+    end
 })
