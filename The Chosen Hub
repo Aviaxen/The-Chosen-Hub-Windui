@@ -2,7 +2,7 @@ local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/rel
 
 local Window = WindUI:CreateWindow({
     Title = "The Chosen Hub",
-    SubTitle = "v1.0.0",
+    SubTitle = "v1.0.2",
     Author = "By Inky",
     Theme = "Sky"
 })
@@ -231,6 +231,72 @@ ScriptsSection:Button({
     end
 })
 
+ScriptsSection:Button({
+    Title = "Verity V1",
+    Desc = "Launches the Verity V1 script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/pQjRMdiG"))()
+            end)
+            if not success then warn("Error loading Verity V1: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Welding Abuse",
+    Desc = "Launches Rexys Welding Hub",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/rangell8/Rexys-Welding-Hub/refs/heads/main/script"))()
+            end)
+            if not success then warn("Error loading Welding Abuse: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Fast Fredbear",
+    Desc = "Launches the Fast Fredbear script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/wbEc0ThZ"))()
+            end)
+            if not success then warn("Error loading Fast Fredbear: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Wither Storm",
+    Desc = "Launches the Wither Storm script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/ian49972/SCRIPTS/refs/heads/main/Wither"))()
+            end)
+            if not success then warn("Error loading Wither Storm: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Control Npcs",
+    Desc = "Launches the NPC control script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty8.lua"))()
+            end)
+            if not success then warn("Error loading Control Npcs: " .. tostring(err)) end
+        end)
+    end
+})
+
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -329,8 +395,45 @@ R6Section:Button({
     end 
 })
 
+local HatsSection = AnimationsTab:Section({ 
+    Title = "Hats Or Reanimation" 
+})
+
+HatsSection:Button({
+    Title = "Fe Noli Hats",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty0.lua"))()
+            end)
+        end)
+    end
+})
+
+HatsSection:Button({
+    Title = "Fe Coolkid Hats",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty2.lua"))()
+            end)
+        end)
+    end
+})
+
+HatsSection:Button({
+    Title = "Uhhh Reanimation",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))()
+            end)
+        end)
+    end
+})
+
 local HubsSection = HubsTab:Section({ 
-    Title = "All Script Hubs",
+    Title = "Hubs",
     Opened = true 
 })
 
