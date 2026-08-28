@@ -7,10 +7,11 @@ local Window = WindUI:CreateWindow({
     Theme = "Sky"
 })
 
-local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "home" })
+local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "house" })
 local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
 local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" })
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
+local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 
 local HomeSection = HomeTab:Section({ 
     Title = "User Session Information",
@@ -51,6 +52,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Nameless Admin",
+    Desc = "Admin Is Very Nameless",
     Callback = function()
         task.spawn(function()
             pcall(function()
@@ -62,6 +64,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Paranoia Admin",
+    Desc = "An Admin Script",
     Callback = function()
         task.spawn(function()
             pcall(function()
@@ -73,6 +76,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Admin Panel",
+    Desc = "Just A Regular Admin Script",
     Callback = function()
         task.spawn(function()
             pcall(function()
@@ -123,7 +127,7 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Fly 1",
+    Title = "Fly",
     Desc = "Launches Fly Script Option 1",
     Callback = function()
         task.spawn(function()
@@ -149,7 +153,7 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Telekinesis Fling 1",
+    Title = "Telekinesis Fling",
     Desc = "Launches Telekinesis Fling script",
     Callback = function()
         task.spawn(function()
@@ -201,7 +205,7 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Netless 1",
+    Title = "Netless",
     Desc = "Launches Anti-hat fall netless script",
     Callback = function()
         task.spawn(function()
@@ -453,3 +457,54 @@ HubsSection:Button({
     end
 })
 
+TrollingTab:Button({
+    Title = "Grab Npcs",
+    Desc = "Launches Grab R6 NPC script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+            end)
+            if not success then warn("Error loading Grab Npcs: " .. tostring(err)) end
+        end)
+    end
+})
+
+TrollingTab:Button({
+    Title = "Dropkick Fling",
+    Desc = "Launches DropKick fling script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/universal/DropKick.lua"))()
+            end)
+            if not success then warn("Error loading Dropkick Fling: " .. tostring(err)) end
+        end)
+    end
+})
+
+TrollingTab:Button({
+    Title = "Fling Gui",
+    Desc = "Launches Universal Fling GUI",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/sypcerr/scripts/refs/heads/main/UFGUI", true))()
+            end)
+            if not success then warn("Error loading Fling Gui 1: " .. tostring(err)) end
+        end)
+    end
+})
+
+TrollingTab:Button({
+    Title = "Spy Script",
+    Desc = "Launches remote/chat spy tool",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/DEVADMINENGINE/9bb547b158bc241a29a14bd43139a7aa/raw/7d7aff0bc1ff69be2b7e8bca848dfbb843399c91/dev%2520spyer"))()
+            end)
+            if not success then warn("Error loading Spy Script: " .. tostring(err)) end
+        end)
+    end
+})
