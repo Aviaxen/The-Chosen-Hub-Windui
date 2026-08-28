@@ -481,6 +481,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Virtual Keyboard",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/VirtualKeyboard.lua"))() 
+            end)
+            if not success then
+                warn("Failed to load Virtual Keyboard: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -844,4 +858,18 @@ GamesTab:Button({
             if not success then warn("Error loading Prison Life Hub: " .. tostring(err)) end
         end)
     end
+})
+
+GamesTab:Button({
+    Title = "Just A Baseplate",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Theo%20Hub.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Just A Baseplate Hub: " .. tostring(err))
+            end
+        end)
+    end 
 })
