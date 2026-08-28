@@ -1,7 +1,7 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "Premium Script Hub",
+    Title = "The Chosen Hub",
     SubTitle = "v1.0.0",
     Author = "By Inky",
     Theme = "Sky"
