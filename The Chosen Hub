@@ -658,5 +658,60 @@ GamesTab:Button({
     end
 })
 
-GamesTab:Button({
+GuiTab:Button({
+    Title = "Coolkid Gui V1",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Coolkid V1: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+GuiTab:Button({
+    Title = "Coolkid Gui V2",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lgui-134417"))()
+            end)
+            if not success then
+                warn("Failed to load Coolkid V2: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+GuiTab:Button({
+    Title = "Coolkid Gui V2.5",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/wateringcancan-eng/209697b404ddee53bac61f2dca1237fc/raw/7458e1e9dfbc277a0fe508663b4e33972e93bb1e/C00lcl4n_2_0.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Coolkid V2.5: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+GuiTab:Button({
+    Title = "Coolkid Gui V3",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Coolkid V3: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 
