@@ -1,4 +1,4 @@
-local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
     Title = "The Chosen Hub",
@@ -383,6 +383,31 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Punch Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/shakk-code/fe-punch-script/refs/heads/main/script.lua', true))()
+            end)
+            if not success then
+                warn("Failed to load Punch Script " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Grab Npcs",
+    Desc = "Codes: Dismantle"
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+            end)
+        end)
+    end
+})
 
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
@@ -646,15 +671,13 @@ HubsSection:Button({
     end
 })
 
-TrollingTab:Button({
-    Title = "Grab Npcs",
-    Desc = "Launches Grab R6 NPC script",
+HubsSection:Button({
+    Title = "Rob Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/KSvbtcPE"))()
             end)
-            if not success then warn("Error loading Grab Npcs: " .. tostring(err)) end
         end)
     end
 })
