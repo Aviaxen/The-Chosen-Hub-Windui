@@ -658,7 +658,7 @@ GamesTab:Button({
     end
 })
 
-GuiTab:Button({
+GuiTab:AddButton({
     Title = "Coolkid Gui V1",
     Callback = function() 
         task.spawn(function()
@@ -672,7 +672,7 @@ GuiTab:Button({
     end 
 })
 
-GuiTab:Button({
+GuiTab:AddButton({
     Title = "Coolkid Gui V2",
     Callback = function() 
         task.spawn(function()
@@ -686,7 +686,7 @@ GuiTab:Button({
     end 
 })
 
-GuiTab:Button({
+GuiTab:AddButton({
     Title = "Coolkid Gui V2.5",
     Callback = function() 
         task.spawn(function()
@@ -700,7 +700,7 @@ GuiTab:Button({
     end 
 })
 
-GuiTab:Button({
+GuiTab:AddButton({
     Title = "Coolkid Gui V3",
     Callback = function() 
         task.spawn(function()
@@ -713,5 +713,3 @@ GuiTab:Button({
         end)
     end 
 })
-
-
