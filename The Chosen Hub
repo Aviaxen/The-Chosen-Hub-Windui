@@ -12,6 +12,7 @@ local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
 local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" })
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
 local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
+local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
 
 local HomeSection = HomeTab:Section({ 
     Title = "User Session Information",
@@ -230,8 +231,6 @@ ScriptsSection:Button({
     end
 })
 
-
--- ==================== 🎭 ANIMATIONS TAB ====================
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -508,3 +507,43 @@ TrollingTab:Button({
         end)
     end
 })
+
+GamesTab:Button({
+    Title = "Your Natural Disaster Hub",
+    Desc = "Launches the Natural Disaster Survival hub script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Nds-Hub/refs/heads/main/Your%20Natural%20Disaster%20Hub"))()
+            end)
+            if not success then warn("Error loading Natural Disaster Hub: " .. tostring(err)) end
+        end)
+    end
+})
+
+GamesTab:Button({
+    Title = "Your 99 Nights Hub",
+    Desc = "Launches the 99 Nights hub script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Your-99-nights-hub/refs/heads/main/Your%2099%20Nights%20Hub"))()
+            end)
+            if not success then warn("Error loading 99 Nights Hub: " .. tostring(err)) end
+        end)
+    end
+})
+
+GamesTab:Button({
+    Title = "Your Prison Life Hub",
+    Desc = "Launches the Prison Life hub script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Your-Prison-Life-Hub/refs/heads/main/Your%20Prison%20Life%20Hub"))()
+            end)
+            if not success then warn("Error loading Prison Life Hub: " .. tostring(err)) end
+        end)
+    end
+})
+
