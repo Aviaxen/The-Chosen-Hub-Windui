@@ -384,14 +384,14 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Punch Script",
+    Title = "Fe Punch",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/shakk-code/fe-punch-script/refs/heads/main/script.lua', true))()
             end)
             if not success then
-                warn("Failed to load Punch Script " .. tostring(err))
+                warn("Failed to load Fe Punch: " .. tostring(err))
             end
         end)
     end 
@@ -399,14 +399,16 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Grab Npcs",
-    Desc = "Codes: Dismantle"
-    Callback = function()
+    Callback = function() 
         task.spawn(function()
-            pcall(function()
+            local success, err = pcall(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
             end)
+            if not success then
+                warn("Failed to load Grab Npcs: " .. tostring(err))
+            end
         end)
-    end
+    end 
 })
 
 local R15Section = AnimationsTab:Section({ 
