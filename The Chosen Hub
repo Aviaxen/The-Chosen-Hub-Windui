@@ -439,6 +439,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Universal Script Searcher",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("http://scripthub.ultimatex.store"))() 
+            end)
+            if not success then
+                warn("Failed to load Universal Script Searcher: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -749,6 +763,20 @@ TrollingTab:Button({
             if not success then warn("Error loading Spy Script: " .. tostring(err)) end
         end)
     end
+})
+
+TrollingTab:Button({
+    Title = "Trolling Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+            end)
+            if not success then
+                warn("Failed to load Trolling Hub: " .. tostring(err))
+            end
+        end)
+    end 
 })
 
 GamesTab:Button({
