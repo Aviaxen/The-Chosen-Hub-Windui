@@ -453,6 +453,34 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Script Searcher",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/cIrUcSTO/raw"))()
+            end)
+            if not success then
+                warn("Failed to load Script Searcher: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Quizbot",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Damian-11/quizbot/refs/heads/master/quizbot.luau"))()
+            end)
+            if not success then
+                warn("Failed to load Quizbot: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
