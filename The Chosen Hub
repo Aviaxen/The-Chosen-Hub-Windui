@@ -1,0 +1,455 @@
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
+local Window = WindUI:CreateWindow({
+    Title = "Premium Script Hub",
+    SubTitle = "v1.0.0",
+    Author = "By Inky",
+    Theme = "Sky"
+})
+
+local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "home" })
+local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
+local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" })
+local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
+
+local HomeSection = HomeTab:Section({ 
+    Title = "User Session Information",
+    Opened = true 
+})
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+HomeSection:Paragraph({
+    Title = "Account Owner: " .. LocalPlayer.DisplayName,
+    Desc = "Username: @" .. LocalPlayer.Name .. "\nAccount Age: " .. LocalPlayer.AccountAge .. " Days"
+})
+
+HomeSection:Button({
+    Title = "Unload & Destruct UI",
+    Callback = function()
+        Window:Destroy()
+    end
+})
+
+local ScriptsSection = ScriptsTab:Section({ 
+    Title = "Universal",
+    Opened = true 
+})
+
+ScriptsSection:Button({
+    Title = "Infinite Yield",
+    Desc = "One Of The Best.", 
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))()
+            end)
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Nameless Admin",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
+            end)
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Paranoia Admin",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://idx.lol/latest.lua"))()
+            end)
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Admin Panel",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Admin-Panel-238222"))()
+            end)
+        end)
+    end
+})
+
+
+ScriptsSection:Button({
+    Title = "Youtube Music Player",
+    Desc = "Launches the YouTube Music Player script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-YouTube-Music-Player-V8-236600"))()
+            end)
+            if not success then warn("Error loading YouTube Music Player: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Pshade (Shaders)",
+    Desc = "Launches Pshade Ultimate shaders",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
+            end)
+            if not success then warn("Error loading Pshade: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Shiftlock",
+    Desc = "Launches Universal Shiftlock (persists after death)",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-Shiftlock-No-Disappear-after-die-23318"))()
+            end)
+            if not success then warn("Error loading Shiftlock: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Fly 1",
+    Desc = "Launches Fly Script Option 1",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/9bilwWLP/raw"))()
+            end)
+            if not success then warn("Error loading Fly 1: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Fly 2",
+    Desc = "Launches Fly Script Option 2",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-script-v3-16742"))()
+            end)
+            if not success then warn("Error loading Fly 2: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Telekinesis Fling 1",
+    Desc = "Launches Telekinesis Fling script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/biR1ZZA9"))()
+            end)
+            if not success then warn("Error loading Telekinesis Fling 1: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Telekinesis 2",
+    Desc = "Lifts unanchored objects only",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Telekinesis-You-can-only-lift-unanc*d-things-237340"))()
+            end)
+            if not success then warn("Error loading Telekinesis 2: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Telekinesis 3",
+    Desc = "Launches Telekinetic script variant",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-telekinetic-66554"))()
+            end)
+            if not success then warn("Error loading Telekinesis 3: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Telekinesis 4",
+    Desc = "Launches Qwerty Telekinesis script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty1.lua"))()
+            end)
+            if not success then warn("Error loading Telekinesis 4: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Netless 1",
+    Desc = "Launches Anti-hat fall netless script",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-hat-fall-82624"))()
+            end)
+            if not success then warn("Error loading Netless 1: " .. tostring(err)) end
+        end)
+    end
+})
+
+ScriptsSection:Button({
+    Title = "Delta Keyboard",
+    Desc = "Launches Delta Keyboard bypass",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
+            end)
+            if not success then warn("Error loading Delta Keyboard: " .. tostring(err)) end
+        end)
+    end
+})
+
+
+-- ==================== 🎭 ANIMATIONS TAB ====================
+local R15Section = AnimationsTab:Section({ 
+    Title = "R15 Scripts",
+    Opened = true 
+})
+
+R15Section:Button({ 
+    Title = "R15 Emotes", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/BundleAnimations.lua"))()
+            end)
+        end)
+    end 
+})
+
+R15Section:Button({ 
+    Title = "Sonic R15", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Azizanzz0/FE-R15-Sonic-X-Super/refs/heads/main/Protected%20SonicXSuper.txt"))()
+            end)
+        end)
+    end 
+})
+
+R15Section:Button({ 
+    Title = "Drone R15", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty16.lua"))()
+            end)
+        end)
+    end 
+})
+
+R15Section:Button({ 
+    Title = "Ink Monster R15", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty14.lua"))()
+            end)
+        end)
+    end 
+})
+
+R15Section:Button({ 
+    Title = "R15 Mini Car", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/UqDEIOpO/raw"))()
+            end)
+        end)
+    end 
+})
+
+R15Section:Button({ 
+    Title = "R15 Katana", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty12.lua"))()
+            end)
+        end)
+    end 
+})
+
+local R6Section = AnimationsTab:Section({ 
+    Title = "R6 Scripts",
+    Opened = true 
+})
+
+R6Section:Button({ 
+    Title = "R6 Animation", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/UC2OHMhe/raw"))() 
+            end)
+        end)
+    end 
+})
+
+R6Section:Button({ 
+    Title = "Slasher Anim", 
+    Callback = function() 
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Slasher-Delta-R6-201469"))()
+            end)
+        end)
+    end 
+})
+
+local HubsSection = HubsTab:Section({ 
+    Title = "All Script Hubs",
+    Opened = true 
+})
+
+HubsSection:Button({
+    Title = "Xvc Hub",
+    Desc = "My Favorite.", 
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XVC-Hub-202396"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Altair Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/hiwjpLFi/raw"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Opiam Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamMain"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Yunas Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/yunus154524/YunusLo1545-HUB/refs/heads/main/YunusLo1545%20HUB"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "DfxClan Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/HK1Xpajw"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Galactic Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/WindUI"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Degent Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/cr20JxP9"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Jarvis Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/jarvisv1/refs/heads/main/jarvis"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "An Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/ANHUBB.lua'))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Nyxmods Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-NyxMods-Universal-245609"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Ghost Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
+            end)
+        end)
+    end
+})
+
