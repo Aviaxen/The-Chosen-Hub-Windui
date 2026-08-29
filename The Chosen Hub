@@ -583,6 +583,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "1x1x1x1 Gui",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://pastebin.com/raw/tfAgBeaa'))()
+            end)
+            if not success then
+                warn("Failed to load 1x1x1x1 Gui: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
