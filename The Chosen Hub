@@ -88,18 +88,6 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Ak Admin",
-    Desc = "Executes Ak Admin Script"
-    Callback = function()
-        task.spawn(function()
-            pcall(function()
-                loadstring(game:HttpGet("https://absent.wtf/AKADMIN.lua"))()
-            end)
-        end)
-    end
-})
-
-ScriptsSection:Button({
     Title = "Youtube Music Player",
     Desc = "Launches the YouTube Music Player script",
     Callback = function()
