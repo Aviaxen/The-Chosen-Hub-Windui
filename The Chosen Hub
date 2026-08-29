@@ -758,12 +758,23 @@ HubsSection:Button({
     end
 })
 
-ScriptsSection:Button({
+HubsSection:Button({
     Title = "Bacon Hub",
     Callback = function()
         task.spawn(function()
             pcall(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))()
+            end)
+        end)
+    end
+})
+
+HubsSection:Button({
+    Title = "Rob Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/KSvbtcPE"))()
             end)
         end)
     end
@@ -858,4 +869,19 @@ GamesTab:Button({
             if not success then warn("Error loading Prison Life Hub: " .. tostring(err)) end
         end)
     end
+})
+
+GamesTab:Button({
+    Title = "Your Just A Baseplate Hub",
+    Desc = "Launches the Just A Baseplate Hub script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Theo%20Hub.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Just a baseplate Hub: " .. tostring(err))
+            end
+        end)
+    end 
 })
