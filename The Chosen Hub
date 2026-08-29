@@ -495,36 +495,7 @@ ScriptsSection:Button({
     end 
 })
 
-ScriptsSection:Button({
-    Title = "Synapse X Executor",
-    Desc = "Executes Synapse X Executor"
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/fgasfga/SCRIPT-HUB/main/SynapseX.lua")){
-            end)
-            if not success then
-                warn("Failed to load Example: " .. tostring(err))
-            end
-        end)
-    end 
-})
-    
- ScriptsSection:Button({
-    Title = "Brainrot Police",
-     Desc = "Executes Brainrot Police"
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-             loadstring(game:HttpGet("https://loadstring.net/scripts/brainrotpolice.lua"))()   
-            end)
-            if not success then
-                warn("Failed to load Brainrot Police: " .. tostring(err))
-            end
-        end)
-    end 
-})   
-    
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
