@@ -40,7 +40,7 @@ local ScriptsSection = ScriptsTab:Section({
     Opened = true 
 })
 
-lScriptsSection:Button({
+ScriptsSection:Button({
     Title = "Infinite Yield",
     Callback = function() 
         task.spawn(function()
