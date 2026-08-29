@@ -908,6 +908,20 @@ HubsSection:Button({
     end
 })
 
+HubsSection:Button({
+    Title = "Solara Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/samuraa1/Solara-Hub/refs/heads/main/SH.lua'))()
+            end)
+            if not success then
+                warn("Failed to load Solara Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 TrollingTab:Button({
     Title = "Trolling Hub",
     Desc = "Launches Ultimate Trolling Gui Script",
