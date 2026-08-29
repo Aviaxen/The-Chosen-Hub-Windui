@@ -1,6 +1,5 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/refs/heads/main/dist/main.lua"))()
 
-
 local Window = WindUI:CreateWindow({
     Title = "The Chosen Hub",
     SubTitle = "v1.0.2",
@@ -42,63 +41,51 @@ local ScriptsSection = ScriptsTab:Section({
 
 ScriptsSection:Button({
     Title = "Infinite Yield",
-    Callback = function() 
+    Desc = "One Of The Best.", 
+    Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-               loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))() 
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))()
             end)
-            if not success then
-                warn("Failed to load Infinite Yield: " .. tostring(err))
-            end
         end)
-    end 
+    end
 })
 
 ScriptsSection:Button({
     Title = "Nameless Admin",
     Desc = "Admin Is Very Nameless",
-    Callback = function() 
+    Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
+            pcall(function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
             end)
-            if not success then
-                warn("Failed to load Nameless Admin: " .. tostring(err))
-            end
         end)
-    end 
+    end
 })
 
 ScriptsSection:Button({
     Title = "Paranoia Admin",
     Desc = "An Admin Script",
-    Callback = function() 
+    Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
+            pcall(function()
                 loadstring(game:HttpGet("https://idx.lol/latest.lua"))()
             end)
-            if not success then
-                warn("Failed to load Paranoia Admin: " .. tostring(err))
-            end
         end)
-    end 
+    end
 })
 
 ScriptsSection:Button({
     Title = "Admin Panel",
-    Desc = "An Regular Admin Script",
-    Callback = function() 
+    Desc = "Just A Regular Admin Script",
+    Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
+            pcall(function()
                 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Admin-Panel-238222"))()
             end)
-            if not success then
-                warn("Failed to load Admin Panel: " .. tostring(err))
-            end
         end)
-    end 
+    end
 })
-
 
 ScriptsSection:Button({
     Title = "Youtube Music Player",
@@ -368,15 +355,7 @@ ScriptsSection:Button({
     Title = "Lalol Executor",
     Desc = "Executes LALOL Hub Backdoor Scanner",
     Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://githubusercontent.com"))
-                if runScript then runScript() end
-            end)
-            if not success then
-                warn("Failed to load Lalol Executor: " .. tostring(err))
-            end
-        end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
     end 
 })
 
@@ -384,19 +363,9 @@ ScriptsSection:Button({
     Title = "Syntax Backdoor Executor",
     Desc = "Executes Syntax v1.2.5",
     Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://bitbucket.org"))
-                if runScript then runScript() end
-            end)
-            if not success then
-                warn("Failed to load Syntax Backdoor Executor: " .. tostring(err))
-            end
-        end)
+        loadstring(game:HttpGet('https://bitbucket.org/projects_early26/new/raw/0cd464afb03269ef1134a30fc8c407162e88dcac/v1.2.5.lua'))()
     end 
 })
-
-
 
 ScriptsSection:Button({
     Title = "Coolkid Executor",
@@ -525,7 +494,6 @@ ScriptsSection:Button({
     end 
 })
 
-
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -535,13 +503,9 @@ R15Section:Button({
     Title = "R15 Emotes", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/BundleAnimations.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/BundleAnimations.lua"))()
             end)
-            if not success then
-                warn("Failed to load R15 Emotes: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -550,13 +514,9 @@ R15Section:Button({
     Title = "Sonic R15", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/Azizanzz0/FE-R15-Sonic-X-Super/refs/heads/main/Protected%20SonicXSuper.txt"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Azizanzz0/FE-R15-Sonic-X-Super/refs/heads/main/Protected%20SonicXSuper.txt"))()
             end)
-            if not success then
-                warn("Failed to load Sonic R15: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -565,13 +525,9 @@ R15Section:Button({
     Title = "Drone R15", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty16.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty16.lua"))()
             end)
-            if not success then
-                warn("Failed to load Drone R15: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -580,13 +536,9 @@ R15Section:Button({
     Title = "Ink Monster R15", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty14.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty14.lua"))()
             end)
-            if not success then
-                warn("Failed to load Ink Monster R15: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -595,13 +547,9 @@ R15Section:Button({
     Title = "R15 Mini Car", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastefy.app/UqDEIOpO/raw"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/UqDEIOpO/raw"))()
             end)
-            if not success then
-                warn("Failed to load R15 Mini Car: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -610,13 +558,9 @@ R15Section:Button({
     Title = "R15 Katana", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty12.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty12.lua"))()
             end)
-            if not success then
-                warn("Failed to load R15 Katana: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -630,13 +574,9 @@ R6Section:Button({
     Title = "R6 Animation", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastefy.app/UC2OHMhe/raw"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/UC2OHMhe/raw"))() 
             end)
-            if not success then
-                warn("Failed to load R6 Animation: " .. tostring(err))
-            end
         end)
     end 
 })
@@ -645,17 +585,12 @@ R6Section:Button({
     Title = "Slasher Anim", 
     Callback = function() 
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Slasher-Delta-R6-201469"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Slasher-Delta-R6-201469"))()
             end)
-            if not success then
-                warn("Failed to load Slasher Anim: " .. tostring(err))
-            end
         end)
     end 
 })
-
 
 local HatsSection = AnimationsTab:Section({ 
     Title = "Hats Or Reanimation" 
@@ -665,13 +600,9 @@ HatsSection:Button({
     Title = "Fe Noli Hats",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty0.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty0.lua"))()
             end)
-            if not success then
-                warn("Failed to load Fe Noli Hats: " .. tostring(err))
-            end
         end)
     end
 })
@@ -680,32 +611,24 @@ HatsSection:Button({
     Title = "Fe Coolkid Hats",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty2.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty2.lua"))()
             end)
-            if not success then
-                warn("Failed to load Fe Coolkid Hats: " .. tostring(err))
-            end
         end)
     end
 })
 
 HatsSection:Button({
     Title = "Uhhh Reanimation",
+    Desc = "Limb Reanimation May Need Netless In Some Games",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))()
             end)
-            if not success then
-                warn("Failed to load Uhhh Reanimation: " .. tostring(err))
-            end
         end)
     end
 })
-
 
 local HubsSection = HubsTab:Section({ 
     Title = "Hubs",
@@ -717,13 +640,9 @@ HubsSection:Button({
     Desc = "My Favorite.", 
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XVC-Hub-202396"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XVC-Hub-202396"))()
             end)
-            if not success then
-                warn("Failed to load Xvc Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -732,13 +651,9 @@ HubsSection:Button({
     Title = "Altair Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastefy.app/hiwjpLFi/raw"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/hiwjpLFi/raw"))()
             end)
-            if not success then
-                warn("Failed to load Altair Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -747,13 +662,9 @@ HubsSection:Button({
     Title = "Opiam Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamMain"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraRBXM/opiamhub/refs/heads/main/OpiamMain"))()
             end)
-            if not success then
-                warn("Failed to load Opiam Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -762,13 +673,9 @@ HubsSection:Button({
     Title = "Yunas Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/yunus154524/YunusLo1545-HUB/refs/heads/main/YunusLo1545%20HUB"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/yunus154524/YunusLo1545-HUB/refs/heads/main/YunusLo1545%20HUB"))()
             end)
-            if not success then
-                warn("Failed to load Yunas Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -777,13 +684,9 @@ HubsSection:Button({
     Title = "DfxClan Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastebin.com/raw/HK1Xpajw"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/HK1Xpajw"))()
             end)
-            if not success then
-                warn("Failed to load DfxClan Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -792,13 +695,9 @@ HubsSection:Button({
     Title = "Galactic Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/WindUI"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/WindUI"))()
             end)
-            if not success then
-                warn("Failed to load Galactic Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -807,13 +706,9 @@ HubsSection:Button({
     Title = "Degent Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastebin.com/raw/cr20JxP9"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/cr20JxP9"))()
             end)
-            if not success then
-                warn("Failed to load Degent Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -822,13 +717,9 @@ HubsSection:Button({
     Title = "Jarvis Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/jarvisv1/refs/heads/main/jarvis"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/jarvisv1/refs/heads/main/jarvis"))()
             end)
-            if not success then
-                warn("Failed to load Jarvis Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -837,13 +728,9 @@ HubsSection:Button({
     Title = "An Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet('https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/ANHUBB.lua'))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/ANHUBB.lua'))()
             end)
-            if not success then
-                warn("Failed to load An Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -852,13 +739,9 @@ HubsSection:Button({
     Title = "Nyxmods Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-NyxMods-Universal-245609"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-NyxMods-Universal-245609"))()
             end)
-            if not success then
-                warn("Failed to load Nyxmods Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -867,13 +750,9 @@ HubsSection:Button({
     Title = "Ghost Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-hub-keyless-65732"))()
             end)
-            if not success then
-                warn("Failed to load Ghost Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -882,13 +761,9 @@ HubsSection:Button({
     Title = "Bacon Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))()
             end)
-            if not success then
-                warn("Failed to load Bacon Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -897,13 +772,9 @@ HubsSection:Button({
     Title = "Rob Hub",
     Callback = function()
         task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://pastebin.com/raw/KSvbtcPE"))
-                if runScript then runScript() end
+            pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/KSvbtcPE"))()
             end)
-            if not success then
-                warn("Failed to load Rob Hub: " .. tostring(err))
-            end
         end)
     end
 })
@@ -914,8 +785,7 @@ TrollingTab:Button({
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))
-                if runScript then runScript() end
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
             end)
             if not success then warn("Error loading Ultimate Trolling Gui: " .. tostring(err)) end
         end)
@@ -928,8 +798,7 @@ TrollingTab:Button({
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/universal/DropKick.lua"))
-                if runScript then runScript() end
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/universal/DropKick.lua"))()
             end)
             if not success then warn("Error loading Dropkick Fling: " .. tostring(err)) end
         end)
@@ -942,8 +811,7 @@ TrollingTab:Button({
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/sypcerr/scripts/refs/heads/main/UFGUI", true))
-                if runScript then runScript() end
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/sypcerr/scripts/refs/heads/main/UFGUI", true))()
             end)
             if not success then warn("Error loading Fling Gui 1: " .. tostring(err)) end
         end)
@@ -956,8 +824,7 @@ TrollingTab:Button({
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://gist.githubusercontent.com/DEVADMINENGINE/9bb547b158bc241a29a14bd43139a7aa/raw/7d7aff0bc1ff69be2b7e8bca848dfbb843399c91/dev%2520spyer"))
-                if runScript then runScript() end
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/DEVADMINENGINE/9bb547b158bc241a29a14bd43139a7aa/raw/7d7aff0bc1ff69be2b7e8bca848dfbb843399c91/dev%2520spyer"))()
             end)
             if not success then warn("Error loading Spy Script: " .. tostring(err)) end
         end)
