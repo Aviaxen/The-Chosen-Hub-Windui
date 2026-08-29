@@ -527,6 +527,48 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Draw Chat Pro",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/ocfi/_/refs/heads/main/a"))()
+            end)
+            if not success then
+                warn("Failed to load Draw Chat Pro: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Egor Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/5EeMRVyx/raw"))()
+            end)
+            if not success then
+                warn("Failed to load Egor Script: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "OpFinality",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://github.com/pwnmaster99/Scripts/raw/refs/heads/main/OPFinality%20Revived"))()
+            end)
+            if not success then
+                warn("Failed to load OpFinality: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
