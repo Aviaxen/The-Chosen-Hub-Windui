@@ -87,6 +87,17 @@ ScriptsSection:Button({
     end
 })
 
+ScriptsSection:Button({
+    Title = "Ak Admin",
+    Desc = "Executes Ak Admin Script"
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://absent.wtf/AKADMIN.lua"))()
+            end)
+        end)
+    end
+})
 
 ScriptsSection:Button({
     Title = "Youtube Music Player",
@@ -622,6 +633,7 @@ HatsSection:Button({
 
 HatsSection:Button({
     Title = "Uhhh Reanimation",
+    Desc = "Limb Reanimation May Need Netless In Some Games",
     Callback = function()
         task.spawn(function()
             pcall(function()
