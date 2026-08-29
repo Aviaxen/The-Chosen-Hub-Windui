@@ -758,15 +758,26 @@ HubsSection:Button({
     end
 })
 
+ScriptsSection:Button({
+    Title = "Bacon Hub",
+    Callback = function()
+        task.spawn(function()
+            pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))()
+            end)
+        end)
+    end
+})
+
 TrollingTab:Button({
-    Title = "Grab Npcs",
-    Desc = "Launches Grab R6 NPC script",
+    Title = "Trolling Hub",
+    Desc = "Launches Ultimate Trolling Gui Script",
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
             end)
-            if not success then warn("Error loading Grab Npcs: " .. tostring(err)) end
+            if not success then warn("Error loading Ultimate Trolling Gui: " .. tostring(err)) end
         end)
     end
 })
