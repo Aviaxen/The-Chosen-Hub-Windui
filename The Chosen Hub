@@ -1152,15 +1152,18 @@ local CreditsSection = CreditsTab:Section({
 
 local OwnerLabel = CreditsSection:Paragraph({
     Title = "👑 Owner",
-    Description = "Inky"
+    Description = "Inky",
+    Image = "crown" -- This version uses raw asset strings without "lucide-"
 })
 
 local CoderLabel = CreditsSection:Paragraph({
     Title = "💻 Lead Coder",
-    Description = "Inky"
+    Description = "Inky",
+    Image = "code"
 })
 
 local SpecialCreditsLabel = CreditsSection:Paragraph({
     Title = "💖 Special Credits",
-    Description = "To You!"
+    Description = "To You!",
+    Image = "heart"
 })
