@@ -17,7 +17,7 @@ local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" 
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
 local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
-local CreditsTab = Window:Tab({ Title = "Credits", Icon = "heart" })
+local CreditsTab = Window:Tab({ Title = "Credits", Icon = "gamepad-2" })
 
 local HomeSection = HomeTab:Section({ 
     Title = "User Session Information",
@@ -108,6 +108,35 @@ ScriptsSection:Button({
     end
 })
 
+ScriptsSection:Button({
+    Title = "Novoline Admin",
+    Desc = "An Cool Admin Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://novoline.pro"))()
+            end)
+            if not success then
+                warn("Failed to load Novoline: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Admin panel",
+    Desc = "An Admin Script Made By Sliver",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/7RNUedb3"))()
+            end)
+            if not success then
+                warn("Failed to load Example: " .. tostring(err))
+            end
+        end)
+    end 
+})
 
 ScriptsSection:Button({
     Title = "Youtube Music Player",
@@ -633,6 +662,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Talentless",
+    Desc = "Has A Key",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://hellohellohell0.com/talentless-raw/TALENTLESS.lua", true))()
+            end)
+            if not success then
+                warn("Failed to load Talentless: " .. tostring(err))
+            end
+        end)
+    end 
+})
 
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
