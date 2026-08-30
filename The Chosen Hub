@@ -314,6 +314,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Coolkid Gui V1",
+    Desc = "Launches Coolkid Gui Version 1",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -328,6 +329,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Coolkid Gui V2",
+    Desc = "Launches Coolkid Gui Version 2",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -342,6 +344,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Coolkid Gui V2.5",
+    Desc = "Launches Coolkid Gui Version 2.5",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -356,6 +359,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Coolkid Gui V3",
+    Desc = "Launches Coolkid Gui Version 3",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -417,6 +421,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Fe Punch",
+    Desc = "Punch People Or Npcs",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -431,6 +436,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Grab Npcs",
+    Desc = "Grab Npcs",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -445,6 +451,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Capy Admin Panel",
+    Desc = "An Admin Panel Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -459,6 +466,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Tp Tool",
+    Desc = "Makes You Teleport Anywhere",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -473,6 +481,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Universal Script Searcher",
+    Desc = "Another Script Searcher",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -487,6 +496,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Script Searcher",
+    Desc = "Searches For Scripts",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -501,6 +511,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Quizbot",
+    Desc = "Basically Yahoo",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -515,6 +526,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Virtual Keyboard",
+    Desc = "An Regular Keyboard Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -529,6 +541,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Draw Chat Pro",
+    Desc = "Draw In Chat",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -543,6 +556,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Egor Script",
+    Desc = "Makes You Roblox Egor",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -557,6 +571,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "OpFinality",
+    Desc = "An Universal Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -571,6 +586,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Ak Admin",
+    Desc = "An Admin Script With an Keysystem",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -585,6 +601,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "1x1x1x1 Gui",
+    Desc = "An Cilent Sided Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -596,6 +613,21 @@ ScriptsSection:Button({
         end)
     end 
 })
+ScriptsSection:Button({
+    Title = "Ai Chat Bot",
+    Desc = "An Chat Bot Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/6c5jXS3z/raw"))()
+            end)
+            if not success then
+                warn("Failed to load Ai Chat Bot: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
@@ -722,6 +754,20 @@ R6Section:Button({
             end)
             if not success then
                 warn("Failed to load Slasher Anim: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Sonic Exe",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/chqPBh9F"))()
+            end)
+            if not success then
+                warn("Failed to load Example: " .. tostring(err))
             end
         end)
     end 
