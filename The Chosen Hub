@@ -5,14 +5,11 @@ local Window = WindUI:CreateWindow({
     SubTitle = "v1.0.2",
     Author = "By Inky",
     Folder = "TheChosenHubConfig", 
-    Icon = "crown", -- Keep this as a Lucide text icon string so it doesn't break
-    Theme = "Sky", 
+    Icon = "crown", 
+    Theme = "Dark", 
     Size = UDim2.fromOffset(580, 460), 
-    Transparent = true, -- Must be true for the background texture to fully bleed through
-    Background = "rbxassetid://10039619999", -- This is where other hubs put their images!
-})
-
-
+    Transparent = true, 
+    
 local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "house" })
 local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
 local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" })
