@@ -8,8 +8,9 @@ local Window = WindUI:CreateWindow({
     Icon = "crown", 
     Theme = "Dark", 
     Size = UDim2.fromOffset(580, 460), 
-    Transparent = true, 
-    
+    Transparent = true 
+})
+
 local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "house" })
 local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
 local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" })
