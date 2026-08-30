@@ -759,7 +759,7 @@ R6Section:Button({
     end 
 })
 
-ScriptsSection:Button({
+R6Section:Button({
     Title = "Sonic Exe",
     Callback = function() 
         task.spawn(function()
@@ -767,7 +767,7 @@ ScriptsSection:Button({
                 loadstring(game:HttpGet("https://pastebin.com/raw/chqPBh9F"))()
             end)
             if not success then
-                warn("Failed to load Example: " .. tostring(err))
+                warn("Failed to load Sonic Exe: " .. tostring(err))
             end
         end)
     end 
