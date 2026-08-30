@@ -1145,31 +1145,32 @@ GamesTab:Button({
     end 
 })
 
-local CreditsSection = ScriptsTab:Section({ 
+local CreditsSection = CreditsTab:Section({ 
     Title = "Credits",
     Opened = true 
 })
 
-local MyLabel = CreditsSection:Paragraph({
-    Title = "Owner",
+
+local OwnerLabel = CreditsSection:Paragraph({
+    Title = "👑 Owner",
     Desc = "Inky",
-    Image = "info", 
-    ImageSize = 20, 
-    Color = "Grey"
+    Image = "lucide-crown", 
+    ImageSize = 22, 
+    Color = "Yellow"       
 })
 
-local MyLabel = CreditsSection:Paragraph({
-    Title = "Coder",
+local CoderLabel = CreditsSection:Paragraph({
+    Title = "💻 Lead Coder",
     Desc = "Inky",
-    Image = "info", 
-    ImageSize = 20, 
-    Color = "Grey"
+    Image = "lucide-code",  
+    ImageSize = 22, 
+    Color = "Blue"          -
 })
 
-local MyLabel = CreditsSection:Paragraph({
-    Title = "Credits",
-    Desc = "To You",
-    Image = "info", 
-    ImageSize = 20, 
-    Color = "Grey"
+local SpecialCreditsLabel = CreditsSection:Paragraph({
+    Title = "💖 Special Credits",
+    Desc = "To You!",
+    Image = "lucide-heart", 
+    ImageSize = 22, 
+    Color = "Red"           
 })
