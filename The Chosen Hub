@@ -1145,12 +1145,31 @@ GamesTab:Button({
     end 
 })
 
-
-local MyLabel = CreditsTab:Paragraph({
+local CreditsSection = ScriptsTab:Section({ 
     Title = "Credits",
-    Desc = "Owner: Inky",
+    Opened = true 
+})
+
+local MyLabel = CreditsSection:Paragraph({
+    Title = "Owner",
+    Desc = "Inky",
     Image = "info", 
     ImageSize = 20, 
     Color = "Grey"
 })
 
+local MyLabel = CreditsSection:Paragraph({
+    Title = "Coder",
+    Desc = "Inky",
+    Image = "info", 
+    ImageSize = 20, 
+    Color = "Grey"
+})
+
+local MyLabel = CreditsSection:Paragraph({
+    Title = "Credits",
+    Desc = "To You",
+    Image = "info", 
+    ImageSize = 20, 
+    Color = "Grey"
+})
