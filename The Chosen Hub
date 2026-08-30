@@ -4,7 +4,11 @@ local Window = WindUI:CreateWindow({
     Title = "The Chosen Hub",
     SubTitle = "v1.0.2",
     Author = "By Inky",
-    Theme = "Sky"
+    Folder = "TheChosenHubConfig", 
+    Icon = "rbxassetid://10039620141", 
+    Theme = "Sky", 
+    Size = UDim2.fromOffset(580, 460), 
+    Transparent = true, 
 })
 
 local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "house" })
