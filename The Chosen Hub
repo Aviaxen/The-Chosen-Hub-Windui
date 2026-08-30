@@ -5,11 +5,26 @@ local Window = WindUI:CreateWindow({
     SubTitle = "v1.0.2",
     Author = "By Inky",
     Folder = "TheChosenHubConfig", 
-    Icon = "crown", 
+    Icon = "rbxthumb://type=Asset&id=139457790081167&w=150&h=150", 
     Theme = "Dark", 
-    Size = UDim2.fromOffset(580, 460), 
-    Transparent = true 
+    Transparent = true,
+    
+    Size = UDim2.fromOffset(380, 535), 
+    
+    Background = "rbxthumb://type=Asset&id=139457790081167&w=420&h=420",
+    BackgroundImageTransparency = 0.45,
 })
+
+task.spawn(function()
+    task.wait(0.1) 
+    local BackgroundUI = Window:GetBackground() or (Window.Elements and Window.Elements.Background)
+    if BackgroundUI and BackgroundUI:IsA("ImageLabel") then
+        BackgroundUI.ScaleType = Enum.ScaleType.Crop
+        
+        BackgroundUI.AnchorPoint = Vector2.new(0.45, 0.5) 
+        BackgroundUI.Position = UDim2.fromScale(0.45, 0.5)
+    end
+end)
 
 local HomeTab = Window:Tab({ Title = "Dashboard", Icon = "house" })
 local ScriptsTab = Window:Tab({ Title = "Scripts", Icon = "scroll" })
