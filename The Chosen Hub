@@ -1145,12 +1145,16 @@ GamesTab:Button({
     end 
 })
 
+local CreditsSection = CreditsTab:Section({
+    Title = "Development Team",
+    Opened = true
+})
+
 local OwnerLabel = CreditsSection:Paragraph({
     Title = "👑 Owner",
     Buttons = {
         {
             Title = "Inky",
-            Variant = "Primary", -- Makes the button WindUI Accent Blue
             Callback = function() end
         }
     }
@@ -1161,7 +1165,6 @@ local CoderLabel = CreditsSection:Paragraph({
     Buttons = {
         {
             Title = "Inky",
-            Variant = "Primary", -- Makes the button WindUI Accent Blue
             Callback = function() end
         }
     }
@@ -1172,9 +1175,7 @@ local SpecialCreditsLabel = CreditsSection:Paragraph({
     Buttons = {
         {
             Title = "To You!",
-            Variant = "Primary", -- Makes the button WindUI Accent Blue
             Callback = function() end
         }
     }
 })
-
