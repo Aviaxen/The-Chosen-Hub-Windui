@@ -17,10 +17,10 @@ local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" 
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
 local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
-local CreditsTab = Window:Tab({ Title = "Credits", Icon = "gamepad-2" })
+local CreditsTab = Window:Tab({ Title = "Credits", Icon = "heart" })
 
 local HomeSection = HomeTab:Section({ 
-    Title = "User Session Information",
+    Title = "Account Infomation",
     Opened = true 
 })
 
@@ -822,7 +822,24 @@ R6Section:Button({
 })
 
 local HatsSection = AnimationsTab:Section({ 
-    Title = "Hats Or Reanimation" 
+    Title = "Hats Or Reanimation",
+    Opened = true 
+})
+
+HatsSection:Button({
+    Title = "Uhhh Reanimation",
+    Desc = "Limb Reanimation May Need Netless In Some Games",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))
+                if runScript then runScript() end
+            end)
+            if not success then
+                warn("Failed to load Uhhh Reanimation: " .. tostring(err))
+            end
+        end)
+    end
 })
 
 HatsSection:Button({
@@ -850,22 +867,6 @@ HatsSection:Button({
             end)
             if not success then
                 warn("Failed to load Fe Coolkid Hats: " .. tostring(err))
-            end
-        end)
-    end
-})
-
-HatsSection:Button({
-    Title = "Uhhh Reanimation",
-    Desc = "Limb Reanimation May Need Netless In Some Games",
-    Callback = function()
-        task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))
-                if runScript then runScript() end
-            end)
-            if not success then
-                warn("Failed to load Uhhh Reanimation: " .. tostring(err))
             end
         end)
     end
