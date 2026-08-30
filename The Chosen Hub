@@ -17,7 +17,7 @@ local AnimationsTab = Window:Tab({ Title = "Animations", Icon = "accessibility" 
 local HubsTab = Window:Tab({ Title = "Hubs", Icon = "layers" })
 local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
-local CreditsTab = Window:Tab({ Title = "Credits", Icon = "gamepad-2" })
+local CreditsTab = Window:Tab({ Title = "Credits", Icon = "heart" })
 
 local HomeSection = HomeTab:Section({ 
     Title = "User Session Information",
