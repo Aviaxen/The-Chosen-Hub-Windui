@@ -1150,38 +1150,32 @@ local CreditsSection = CreditsTab:Section({
     Opened = true
 })
 
-local OwnerButton = CreditsSection:Button({
+local OwnerLabel = CreditsSection:Paragraph({
     Title = "👑 Owner",
-    Desc = "Inky", -- Uses right-side action layout formatting
-    Callback = function()
-        WindUI:Notify({
-            Title = "Owner Info",
-            Content = "Inky is the main hub creator!",
-            Duration = 3
-        })
-    end
+    Buttons = {
+        {
+            Title = "Inky",
+            Callback = function() end
+        }
+    }
 })
 
-local CoderButton = CreditsSection:Button({
+local CoderLabel = CreditsSection:Paragraph({
     Title = "💻 Lead Coder",
-    Desc = "Inky",
-    Callback = function()
-        WindUI:Notify({
-            Title = "Developer Info",
-            Content = "Inky coded this entire interface layout.",
-            Duration = 3
-        })
-    end
+    Buttons = {
+        {
+            Title = "Inky",
+            Callback = function() end
+        }
+    }
 })
 
-local SpecialCreditsButton = CreditsSection:Button({
+local SpecialCreditsLabel = CreditsSection:Paragraph({
     Title = "💖 Special Credits",
-    Desc = "To You!",
-    Callback = function()
-        WindUI:Notify({
-            Title = "Thank You!",
-            Content = "Thanks for using the script hub!",
-            Duration = 3
-        })
-    end
+    Buttons = {
+        {
+            Title = "To You!",
+            Callback = function() end
+        }
+    }
 })
