@@ -754,6 +754,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Synapse X Executor",
+    Desc = "An Goated Executor Back In The Days",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -1176,7 +1177,7 @@ HubsSection:Button({
     end 
 })
 
-ScriptsSection:Button({
+HubsSection:Button({
     Title = "Aesthetic Hub",
     Callback = function() 
         task.spawn(function()
