@@ -784,6 +784,21 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Flashback Script",
+    Desc = "Flashback",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://pastebin.com/raw/fARYvrb6"))() 
+            end)
+            if not success then
+                warn("Failed to load Flashback: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
