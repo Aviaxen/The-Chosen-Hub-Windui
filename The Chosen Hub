@@ -752,6 +752,20 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Synapse X Executor",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Chillz-s-scripts/main/Synapse-X-Remake.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Synapse X: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
