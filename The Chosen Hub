@@ -769,6 +769,21 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Inventory Esp",
+    Desc = "Esp For Inventory",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Finilando/script/refs/heads/main/ESP%20INVENTORY"))()
+            end)
+            if not success then
+                warn("Failed to load Inventory Esp: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -859,6 +874,20 @@ R15Section:Button({
             end)
             if not success then
                 warn("Failed to load R15 Katana: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+R15Section:Button({
+    Title = "R15 Animation",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://kbauu.neocities.org/animation-hub"))()  
+            end)
+            if not success then
+                warn("Failed to load R15 Animation: " .. tostring(err))
             end
         end)
     end 
@@ -1243,6 +1272,21 @@ TrollingTab:Button({
             if not success then warn("Error loading Spy Script: " .. tostring(err)) end
         end)
     end
+})
+
+TrollingTab:Button({
+    Title = "Invisible Fling",
+    Desc = "Makes You A Brick That Can Fling",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/SVG-CARLOS/I-spent-soo-much-time-making-this-script-that-I-cant-make-a-good-title/refs/heads/main/Invisfling"))()  
+            end)
+            if not success then
+                warn("Failed to load Invisible Fling: " .. tostring(err))
+            end
+        end)
+    end 
 })
 
 GamesTab:Button({
