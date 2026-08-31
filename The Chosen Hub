@@ -34,6 +34,8 @@ local TrollingTab = Window:Tab({ Title = "Trolling", Icon = "flame" })
 local GamesTab = Window:Tab({ Title = "Games", Icon = "gamepad-2" })
 local CreditsTab = Window:Tab({ Title = "Credits", Icon = "heart" })
 
+HomeTab:Select()
+
 local HomeSection = HomeTab:Section({ 
     Title = "Account Infomation",
     Opened = true 
