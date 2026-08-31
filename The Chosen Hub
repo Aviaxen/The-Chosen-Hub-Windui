@@ -737,6 +737,21 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Universal Script Creator",
+    Desc = "Hub Where You Can Add Any Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Universal-Script-Creator/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Script Creator: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -1142,6 +1157,20 @@ HubsSection:Button({
             end)
             if not success then
                 warn("Failed to load Solara Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Aesthetic Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/Darknife339/b6b0d348c59ac034c8eb7f6210dd4029/raw/9c875ab4f5fdfccc4ef318912d9a02a4f08dd7ef/file.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Aesthetic Hub: " .. tostring(err))
             end
         end)
     end 
