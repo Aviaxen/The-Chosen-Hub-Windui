@@ -517,7 +517,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Grab Npcs",
-    Desc = "Grab Npcs",
+    Desc = "Codes:Dismantle/Mega",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -902,6 +902,20 @@ R15Section:Button({
             end)
             if not success then
                 warn("Failed to load R15 Animation: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+R15Section:Button({
+    Title = "Scary Animation",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Scary-Anim/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Scary Animation: " .. tostring(err))
             end
         end)
     end 
