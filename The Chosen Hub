@@ -154,6 +154,36 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
+    Title = "Ak Admin",
+    Desc = "An Admin Script With an Keysystem",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://absent.wtf/AKADMIN.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Ak Admin: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Capy Admin Panel",
+    Desc = "An Admin Panel Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Capygg-UNIVERSAL-Admin-v3-238140"))()
+            end)
+            if not success then
+                warn("Failed to load Admin Panel: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
     Title = "Youtube Music Player",
     Desc = "Launches the YouTube Music Player script",
     Callback = function()
@@ -499,21 +529,6 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
-    Title = "Capy Admin Panel",
-    Desc = "An Admin Panel Script",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Capygg-UNIVERSAL-Admin-v3-238140"))()
-            end)
-            if not success then
-                warn("Failed to load Admin Panel: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-ScriptsSection:Button({
     Title = "Tp Tool",
     Desc = "Makes You Teleport Anywhere",
     Callback = function() 
@@ -628,21 +643,6 @@ ScriptsSection:Button({
             end)
             if not success then
                 warn("Failed to load OpFinality: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-ScriptsSection:Button({
-    Title = "Ak Admin",
-    Desc = "An Admin Script With an Keysystem",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://absent.wtf/AKADMIN.lua"))()
-            end)
-            if not success then
-                warn("Failed to load Ak Admin: " .. tostring(err))
             end
         end)
     end 
