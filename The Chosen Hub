@@ -342,6 +342,21 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
+    Title = "Verity V2",
+    Desc = "Loads Verity Version 2",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/rizz65667-svg/Ver/refs/heads/main/Verity_FIXED.TxT"))()
+            end)
+            if not success then
+                warn("Failed to load Verity V2: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
     Title = "Welding Abuse",
     Desc = "Launches Rexys Welding Hub",
     Callback = function()
@@ -794,6 +809,21 @@ ScriptsSection:Button({
             end)
             if not success then
                 warn("Failed to load Flashback: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Desync Script",
+    Desc = "Basically Desyncs You from your character",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/MKQhZyAn/raw"))()
+            end)
+            if not success then
+                warn("Failed to load Desync: " .. tostring(err))
             end
         end)
     end 
@@ -1338,7 +1368,7 @@ GamesTab:Button({
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/Inkyxen/Nds-Hub/refs/heads/main/Your%20Natural%20Disaster%20Hub"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Natural-Disaster-Hub/refs/heads/main/README.md"))()
             end)
             if not success then warn("Error loading Natural Disaster Hub: " .. tostring(err)) end
         end)
