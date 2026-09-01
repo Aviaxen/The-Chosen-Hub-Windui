@@ -1295,6 +1295,20 @@ HubsSection:Button({
     end 
 })
 
+HubsSection:Button({
+    Title = "Onyx Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/zyntrix20/OnyxHub/refs/heads/main/Loader"))()
+            end)
+            if not success then
+                warn("Failed to load Onyx Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 TrollingTab:Button({
     Title = "Trolling Hub",
     Desc = "Launches Ultimate Trolling Gui Script",
