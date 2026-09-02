@@ -844,6 +844,36 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Phonk Script",
+    Desc = "Funny Phonk Script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/9s2dyhcgwm-svg/Troll-phonk-meme/refs/heads/main/The%20Script"))()
+            end)
+            if not success then
+                warn("Failed to load Phonk: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Wikipedia Script",
+    Desc = "Wikipedia Script that can search anything",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://pastebin.com/raw/4UMAeFvE"))()  
+            end)
+            if not success then
+                warn("Failed to load Wikipedia: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
