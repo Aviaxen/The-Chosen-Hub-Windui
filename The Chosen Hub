@@ -829,6 +829,21 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Ragdoll Script",
+    Desc = "0 Gravity Ragdoll",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/0%20Graviy%20Trip%20Universal"))()
+            end)
+            if not success then
+                warn("Failed to load Ragdoll: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
@@ -961,6 +976,20 @@ R15Section:Button({
             end)
             if not success then
                 warn("Failed to load Scary Animation: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+R15Section:Button({
+    Title = "Invincible Fly",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Invincible-Fly/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Invincible Fly: " .. tostring(err))
             end
         end)
     end 
