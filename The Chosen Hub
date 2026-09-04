@@ -1436,7 +1436,7 @@ TrollingTab:Button({
     end
 })
 
-ScriptsSection:Button({
+TrollingTab:Button({
     Title = "Fling Gui 2",
     Desc = "Launches Universal Fling GUI 2",
     Callback = function() 
