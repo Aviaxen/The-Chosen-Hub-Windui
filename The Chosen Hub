@@ -1140,6 +1140,20 @@ HatsSection:Button({
     end
 })
 
+HatsSection:Button({
+    Title = "Patchma Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty25.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Patchma Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local HubsSection = HubsTab:Section({ 
     Title = "Hubs",
     Opened = true 
@@ -1420,6 +1434,21 @@ TrollingTab:Button({
             if not success then warn("Error loading Fling Gui 1: " .. tostring(err)) end
         end)
     end
+})
+
+ScriptsSection:Button({
+    Title = "Fling Gui 2",
+    Desc = "Launches Universal Fling GUI 2",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/GoldenCheats/natural-disaster-script/refs/heads/main/NATURAL%20DISASTER%20FLING%20V2"))()  
+            end)
+            if not success then
+                warn("Failed to load Fling Gui 2: " .. tostring(err))
+            end
+        end)
+    end 
 })
 
 TrollingTab:Button({
