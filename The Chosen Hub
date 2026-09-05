@@ -1090,6 +1090,20 @@ R15Section:Button({
     end 
 })
 
+R15Section:Button({
+    Title = "Shadow The Hedgehog R15",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastefy.app/0QSkiaHL/raw"))()
+            end)
+            if not success then
+                warn("Failed to load Shadow R15: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R6Section = AnimationsTab:Section({ 
     Title = "R6 Scripts",
     Opened = true 
