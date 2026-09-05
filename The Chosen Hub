@@ -924,6 +924,21 @@ ScriptsSection:Button({
     end 
 })
 
+ScriptsSection:Button({
+    Title = "Server Finder",
+    Desc = "Finds Good Servers (Low Ping) For You",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/MaxproGlitcher/Server_Finder_Deluxe_Back_Up/refs/heads/main/.luau"))()
+            end)
+            if not success then
+                warn("Failed to load Server Finder: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local R15Section = AnimationsTab:Section({ 
     Title = "R15 Scripts",
     Opened = true 
