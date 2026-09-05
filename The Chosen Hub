@@ -4,16 +4,20 @@ local Window = WindUI:CreateWindow({
     Title = "The Chosen Hub",
     SubTitle = "v1.0.2",
     Author = "By Inky",
-    Folder = "TheChosenHubConfig", 
-    Icon = "crown", 
-    Theme = "Dark", 
+    Folder = "TheChosenHubConfig",
+    Icon = "crown",
+    Theme = "Dark",
     Transparent = true,
     
-    Size = UDim2.fromOffset(380, 535), 
+    Size = UDim2.fromOffset(380, 535),
     
     Background = "rbxthumb://type=Asset&id=139457790081167&w=420&h=420",
     BackgroundImageTransparency = 0.45,
-})
+    
+    -- Put them right here, before the closing bracket!
+    Search = true,
+    HideSearchBar = false,
+}) -- This closing bracket on line 16 stays at the end of the block
 
 task.spawn(function()
     task.wait(0.1) 
@@ -95,7 +99,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Dex",
-    Desc = "An Propertiws Management Script",
+    Desc = "An Properties Management Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
