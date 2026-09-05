@@ -1539,7 +1539,7 @@ GamesTab:Button({
     end 
 })
 
-ScriptsSection:Button({
+GamesTab:Button({
     Title = "Your Murder Mystery Hub",
     Desc = "Launches the Murder Mustery Hub script",
     Callback = function() 
