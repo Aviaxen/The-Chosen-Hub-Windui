@@ -95,6 +95,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Dex",
+    Desc = "An Propertiws Management Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -109,6 +110,7 @@ ScriptsSection:Button({
 
 ScriptsSection:Button({
     Title = "Remote Spy",
+    Desc = "Remote Spy Script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
