@@ -94,6 +94,34 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
+    Title = "Dex",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://github.com/AZYsGithub/DexPlusPlus/releases/latest/download/out.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Dex: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Remote Spy",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+            end)
+            if not success then
+                warn("Failed to load Remote Spy: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
     Title = "Paranoia Admin",
     Desc = "An Admin Script",
     Callback = function()
