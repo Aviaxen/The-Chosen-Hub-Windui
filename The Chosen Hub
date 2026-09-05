@@ -713,6 +713,7 @@ ScriptsSection:Button({
         end)
     end 
 })
+
 ScriptsSection:Button({
     Title = "Ai Chat Bot",
     Desc = "An Chat Bot Script",
@@ -1360,21 +1361,6 @@ HubsSection:Button({
 })
 
 HubsSection:Button({
-    Title = "Bacon Hub",
-    Callback = function()
-        task.spawn(function()
-            local success, err = pcall(function()
-                local runScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconHub1/Autoupdate/refs/heads/main/Cuz%20yes"))
-                if runScript then runScript() end
-            end)
-            if not success then
-                warn("Failed to load Bacon Hub: " .. tostring(err))
-            end
-        end)
-    end
-})
-
-HubsSection:Button({
     Title = "Rob Hub",
     Callback = function()
         task.spawn(function()
@@ -1412,20 +1398,6 @@ HubsSection:Button({
             end)
             if not success then
                 warn("Failed to load Aesthetic Hub: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-HubsSection:Button({
-    Title = "Onyx Hub",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/zyntrix20/OnyxHub/refs/heads/main/Loader"))()
-            end)
-            if not success then
-                warn("Failed to load Onyx Hub: " .. tostring(err))
             end
         end)
     end 
@@ -1562,6 +1534,21 @@ GamesTab:Button({
             end)
             if not success then
                 warn("Failed to load Just a baseplate Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
+    Title = "Your Murder Mystery Hub",
+    Desc = "Launches the Murder Mustery Hub script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Murder-Mystery-Hub/refs/heads/main/README.md"))()   
+            end)
+            if not success then
+                warn("Failed to load Mm2 Hub: " .. tostring(err))
             end
         end)
     end 
