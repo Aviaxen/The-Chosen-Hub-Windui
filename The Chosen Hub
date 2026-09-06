@@ -14,10 +14,9 @@ local Window = WindUI:CreateWindow({
     Background = "rbxthumb://type=Asset&id=139457790081167&w=420&h=420",
     BackgroundImageTransparency = 0.45,
     
-    -- Put them right here, before the closing bracket!
     Search = true,
     HideSearchBar = false,
-}) -- This closing bracket on line 16 stays at the end of the block
+}) 
 
 task.spawn(function()
     task.wait(0.1) 
