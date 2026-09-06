@@ -14,10 +14,9 @@ local Window = WindUI:CreateWindow({
     Background = "rbxthumb://type=Asset&id=139457790081167&w=420&h=420",
     BackgroundImageTransparency = 0.45,
     
-    -- Put them right here, before the closing bracket!
     Search = true,
     HideSearchBar = false,
-}) -- This closing bracket on line 16 stays at the end of the block
+}) 
 
 task.spawn(function()
     task.wait(0.1) 
@@ -214,19 +213,6 @@ ScriptsSection:Button({
             end)
             if not success then
                 warn("Failed to load Admin Panel: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-ScriptsSection:Button({
-    Title = "Infinite Yield Reborn",
-    Callback = function() 
-        task.spawn(function()
-            loadstring(game:HttpGet(('https://raw.githubusercontent.com/mxsynry/infiniteyield-reborn/refs/heads/scriptblox/source' or 'https://mxsynry.github.io/storage/iyrbackup/legacy/scriptblox/source')))()
-            end)
-            if not success then
-                warn("Failed to load Infinite Yield Reborn: " .. tostring(err))
             end
         end)
     end 
