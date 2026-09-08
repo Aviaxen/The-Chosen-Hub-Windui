@@ -1530,7 +1530,7 @@ TrollingTab:Button({
 
 GamesTab:Button({
     Title = "Your Natural Disaster Hub",
-    Desc = "Launches the Natural Disaster Survival hub script",
+    Desc = "Launches the Natural Disaster Survival Hub script",
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
@@ -1543,7 +1543,7 @@ GamesTab:Button({
 
 GamesTab:Button({
     Title = "Your 99 Nights Hub",
-    Desc = "Launches the 99 Nights hub script",
+    Desc = "Launches the 99 Nights Hub script",
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
@@ -1556,7 +1556,7 @@ GamesTab:Button({
 
 GamesTab:Button({
     Title = "Your Prison Life Hub",
-    Desc = "Launches the Prison Life hub script",
+    Desc = "Launches the Prison Life Hub script",
     Callback = function()
         task.spawn(function()
             local success, err = pcall(function()
@@ -1568,23 +1568,8 @@ GamesTab:Button({
 })
 
 GamesTab:Button({
-    Title = "Your Just A Baseplate Hub",
-    Desc = "Launches the Just A Baseplate Hub script",
-    Callback = function() 
-        task.spawn(function()
-            local success, err = pcall(function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/Jskfhggjxu/My-Script/refs/heads/main/Theo%20Hub.lua"))()
-            end)
-            if not success then
-                warn("Failed to load Just a baseplate Hub: " .. tostring(err))
-            end
-        end)
-    end 
-})
-
-GamesTab:Button({
     Title = "Your Murder Mystery Hub",
-    Desc = "Launches the Murder Mustery Hub script",
+    Desc = "Launches the Murder Mystery Hub script",
     Callback = function() 
         task.spawn(function()
             local success, err = pcall(function()
@@ -1592,6 +1577,36 @@ GamesTab:Button({
             end)
             if not success then
                 warn("Failed to load Mm2 Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+GamesTab:Button({
+    Title = "Your Funky Friday Hub",
+    Desc = "Launches the Funky Friday Hub script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Funky-Friday-Script/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Your Funky Friday Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+GamesTab:Button({
+    Title = "Your Doors Hub",
+    Desc = "Launches the Doors Hub script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Doors-Hub/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Your Doors Hub: " .. tostring(err))
             end
         end)
     end 
