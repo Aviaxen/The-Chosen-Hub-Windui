@@ -1299,6 +1299,21 @@ HubsSection:Button({
 })
 
 HubsSection:Button({
+    Title = "DfxClan 1.5 Hub",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                local runScript = loadstring(game:HttpGet("https://pastebin.com/raw/yxz3gVRq"))()
+                if runScript then runScript() end
+            end)
+            if not success then
+                warn("Failed to load DfxClan Hub 1.5: " .. tostring(err))
+            end
+        end)
+    end
+})
+
+HubsSection:Button({
     Title = "Galactic Hub",
     Callback = function()
         task.spawn(function()
