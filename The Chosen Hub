@@ -1597,6 +1597,21 @@ GamesTab:Button({
     end 
 })
 
+GamesTab:Button({
+    Title = "Your Keyboard Escape Hub",
+    Desc = "Launches the Keyboard Escape Hub script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Keyboard-Escape-Hub/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Your Keyboard Escape Hub: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local CreditsSection = CreditsTab:Section({
     Title = "Development Team",
     Opened = true
