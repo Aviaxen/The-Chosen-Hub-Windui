@@ -1612,6 +1612,20 @@ GamesTab:Button({
     end 
 })
 
+GamesTab:Button({
+    Title = "Your Blade Ball Hub",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/Your-Bladeball-Hub/refs/heads/main/README.md"))()
+            end)
+            if not success then
+                warn("Failed to load Your Blade Ball Hub< : " .. tostring(err))
+            end
+        end)
+    end 
+})
+
 local CreditsSection = CreditsTab:Section({
     Title = "Development Team",
     Opened = true
