@@ -759,6 +759,21 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
+    Title = "Fps Booster 2",
+    Desc = "An Fps Booster",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/JoshzzAlteregooo/FpsBoosterV2/refs/heads/main/FpsBoosterV2/JoshzzPanelBooster"))()
+            end)
+            if not success then
+                warn("Failed to load Fps Booster 2: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
     Title = "Brainrot Police",
     Desc = "Executes Brainrot Police Script",
     Callback = function() 
