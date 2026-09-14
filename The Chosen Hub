@@ -1,3 +1,5 @@
+--Unfortunately This Hub Will Be Discontinued (in this ui library)--
+
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/refs/heads/main/dist/main.lua"))()
 
 local Window = WindUI:CreateWindow({
