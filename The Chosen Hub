@@ -336,6 +336,21 @@ ScriptsSection:Button({
 })
 
 ScriptsSection:Button({
+    Title = "Telekinesis Gui 5",
+    Desc = "Launches Telekinesis Gui script",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/VVWcfs9t"))()
+            end)
+            if not success then
+                warn("Failed to load Telekinesis Gui: " .. tostring(err))
+            end
+        end)
+    end 
+})
+
+ScriptsSection:Button({
     Title = "Netless",
     Desc = "Launches Anti-hat fall netless script",
     Callback = function()
