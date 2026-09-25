@@ -1,4 +1,4 @@
---Unfortunately This Hub Will Be Discontinued (in this ui library)--
+--Unfortunately This Hub Will Be Discontinued (in this ui library)-
 
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/refs/heads/main/dist/main.lua"))()
 
@@ -59,6 +59,20 @@ HomeSection:Button({
     Callback = function()
         Window:Destroy()
     end
+})
+
+ScriptsSection:Button({
+    Title = "The Chosen Hub Rayfield",
+    Callback = function() 
+        task.spawn(function()
+            local success, err = pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Aviaxen/The-Chosen-Hub/refs/heads/main/The%20Chosen%20Hub"))()
+            end)
+            if not success then
+                warn("Failed to load Rayfield: " .. tostring(err))
+            end
+        end)
+    end 
 })
 
 local ScriptsSection = ScriptsTab:Section({ 
