@@ -61,7 +61,7 @@ HomeSection:Button({
     end
 })
 
-ScriptsSection:Button({
+HomeSection:Button({
     Title = "The Chosen Hub Rayfield",
     Callback = function() 
         task.spawn(function()
